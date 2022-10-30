@@ -1,17 +1,13 @@
-FROM ubuntu:16.04
+FROM rhscl/s2i-core-rhel7:1
 
-RUN groupadd -r swuser -g 433 && \
-    useradd -u 431 -r -g swuser -s /sbin/nologin -c "Docker image user" swuser
-
-RUN cat /etc/passwd
-
-USER root
+#RUN groupadd -r swuser -g 433 && \
+#    useradd -u 431 -r -g swuser -s /sbin/nologin -c "Docker image user" swuser
 
 RUN apt-get update && apt-get install -y python python-pip
 
 RUN pip install flask
 
-USER swuser
+USER 1001
 
 COPY app.py /opt/
 
