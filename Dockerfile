@@ -15,11 +15,15 @@ RUN mkdir ${APP_ROOT} && \
     chgrp -R 0 ${APP_ROOT} && \
     chmod -R g=u ${APP_ROOT} /etc/passwd
 
-
-COPY app.py ${APP_ROOT}
-
 USER 10001
 
 WORKDIR ${APP_ROOT}
 
-ENTRYPOINT FLASK_APP=${APP_ROOT}/app.py flask fun --host=0.0.0.0
+COPY app.py ${APP_ROOT}
+COPY requirements.txt requirements.txt
+
+RUN pip3 install -r requirements.txt
+
+COPY . .
+
+CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0"]
