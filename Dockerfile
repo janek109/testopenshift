@@ -1,5 +1,5 @@
 #FROM ubuntu:latest
-FROM python:3.11-slim-buster
+FROM python:3.11-buster
 
 #RUN gpg --keyserver keyserver.ubuntu.com --recv-keys 871920D1991BC93C
 #RUN apt-get update && apt-get install -y python python-pip
