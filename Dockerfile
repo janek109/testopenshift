@@ -20,7 +20,9 @@ WORKDIR ${APP_ROOT}
 COPY app.py .
 COPY requirements.txt .
 
-RUN pip install -r requirements.txt
+RUN python3.11 -m pip install -r requirements.txt
+
+COPY . .
 
 USER 10001
 
