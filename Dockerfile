@@ -1,11 +1,12 @@
-FROM ubuntu:latest
+#FROM ubuntu:latest
+FROM python:3.8-slim-buster
 
 #RUN gpg --keyserver keyserver.ubuntu.com --recv-keys 871920D1991BC93C
 #RUN apt-get update && apt-get install -y python python-pip
 
-RUN apt-get install -y python python-pip
+#RUN apt-get install -y python python-pip
 
-RUN pip install flask
+#RUN pip install flask
 
 ENV APP_ROOT=/opt/www
 ENV PATH=/usr/local/bin:${PATH} HOME=${APP_ROOT}
