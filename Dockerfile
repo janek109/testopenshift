@@ -15,6 +15,8 @@ RUN mkdir ${APP_ROOT} && \
     chgrp -R 0 ${APP_ROOT} && \
     chmod -R g=u ${APP_ROOT} /etc/passwd
 
+RUN apt install python3-pip
+
 USER 10001
 
 WORKDIR ${APP_ROOT}
