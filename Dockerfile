@@ -20,7 +20,7 @@ WORKDIR ${APP_ROOT}
 COPY app.py .
 COPY requirements.txt .
 
-RUN python3.7 -m pip install -r requirements.txt
+RUN python -m pip install -r requirements.txt
 
 COPY . .
 
