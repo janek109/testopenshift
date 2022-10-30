@@ -1,5 +1,5 @@
 #FROM ubuntu:latest
-FROM python:3.11-buster
+FROM python:3.7-buster
 
 #RUN gpg --keyserver keyserver.ubuntu.com --recv-keys 871920D1991BC93C
 #RUN apt-get update && apt-get install -y python python-pip
@@ -20,7 +20,7 @@ WORKDIR ${APP_ROOT}
 COPY app.py .
 COPY requirements.txt .
 
-RUN python3.11 -m pip install -r requirements.txt
+RUN python3.7 -m pip install -r requirements.txt
 
 COPY . .
 
