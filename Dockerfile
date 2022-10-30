@@ -6,8 +6,6 @@ FROM python:3.8-slim-buster
 
 #RUN apt-get install -y python python-pip
 
-RUN apt-get install python3-pip
-
 #RUN pip install flask
 
 ENV APP_ROOT=/opt/www
