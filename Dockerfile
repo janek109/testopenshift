@@ -1,6 +1,6 @@
 FROM ubuntu:latest
 
-RUN apt-get install gnupg
+RUN apt-get install gnupg2
 
 RUN gpg --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 871920D1991BC93C
 
