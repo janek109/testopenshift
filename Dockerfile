@@ -1,5 +1,5 @@
-#FROM ubuntu:latest
-FROM python:3.7-buster
+FROM ubuntu:latest
+#FROM python:3.7-buster
 
 #RUN gpg --keyserver keyserver.ubuntu.com --recv-keys 871920D1991BC93C
 #RUN apt-get update && apt-get install -y python python-pip
@@ -26,4 +26,4 @@ USER 10001
 #RUN source .venv/bin/activate
 RUN echo $0
 
-ENTRYPOINT FLASK_APP=${APP_ROOT}/app.py flask fun --host=0.0.0.0
+#ENTRYPOINT FLASK_APP=${APP_ROOT}/app.py flask fun --host=0.0.0.0
