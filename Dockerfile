@@ -18,6 +18,8 @@ RUN mkdir ${APP_ROOT} && \
 
 WORKDIR ${APP_ROOT}
 
+RUN apt-get install -y python python-pip
+
 #RUN python -m pip install -r requirements.txt
 
 COPY . .
