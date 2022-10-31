@@ -12,14 +12,14 @@ FROM centos/python-36-centos7
 
 #RUN pip install flask
 
-ENV APP_ROOT=/opt/www
-ENV PATH=/usr/local/bin:${PATH} HOME=${APP_ROOT}
-RUN mkdir ${APP_ROOT} && \
-    chmod -R u+x /usr/local/bin && \
-    chgrp -R 0 ${APP_ROOT} && \
-    chmod -R g=u ${APP_ROOT} /etc/passwd
-
-WORKDIR ${APP_ROOT}
+#ENV APP_ROOT=/opt/www
+#ENV PATH=/usr/local/bin:${PATH} HOME=${APP_ROOT}
+#RUN mkdir ${APP_ROOT} && \
+#    chmod -R u+x /usr/local/bin && \
+#    chgrp -R 0 ${APP_ROOT} && \
+#    chmod -R g=u ${APP_ROOT} /etc/passwd
+#
+#WORKDIR ${APP_ROOT}
 
 #RUN python -m pip install -r requirements.txt
 
