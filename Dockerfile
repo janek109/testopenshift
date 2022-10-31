@@ -2,7 +2,8 @@ FROM centos/python-36-centos7
 #FROM ubuntu:latest
 #FROM python:3.7-buster
 
-RUN add-apt-repository universe
+#RUN add-apt-repository universe
+RUN apt-get install software-properties-common
 
 #RUN gpg --keyserver keyserver.ubuntu.com --recv-keys 871920D1991BC93C
 RUN apt-get update && apt-get install -y python python-pip
