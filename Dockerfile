@@ -1,4 +1,5 @@
-FROM ubuntu:latest
+FROM centos/python-36-centos7
+#FROM ubuntu:latest
 #FROM python:3.7-buster
 
 #RUN gpg --keyserver keyserver.ubuntu.com --recv-keys 871920D1991BC93C
