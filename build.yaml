@@ -1,0 +1,46 @@
+apiVersion: build.openshift.io/v1
+kind: BuildConfig
+metadata:
+  annotations:
+    openshift.io/generated-by: OpenShiftWebConsole
+  creationTimestamp: '2022-10-30T14:35:53Z'
+  labels:
+    app: django-ex-docker
+  name: django-ex-docker
+  namespace: my-webapplication
+  resourceVersion: '186884'
+  selfLink: >-
+    /apis/build.openshift.io/v1/namespaces/my-webapplication/buildconfigs/django-ex-docker
+  uid: 2873a187-5860-11ed-9fbe-525400541fb2
+spec:
+  failedBuildsHistoryLimit: 5
+  nodeSelector: null
+  output:
+    to:
+      kind: ImageStreamTag
+      name: 'django-ex-docker:latest'
+  postCommit: {}
+  resources: {}
+  runPolicy: Serial
+  source:
+    git:
+      ref: master
+      uri: 'https://github.com/janek109/testopenshift.git'
+    type: Git
+  strategy:
+    dockerStrategy:
+      from:
+        kind: DockerImage
+        name: 'ubuntu:20.04'
+    type: Docker
+  successfulBuildsHistoryLimit: 5
+  triggers:
+    - type: ConfigChange
+    - generic:
+        secret: [removed]
+      type: Generic
+    - github:
+        secret: [removed]
+      type: GitHub
+status:
+  lastVersion: 107
