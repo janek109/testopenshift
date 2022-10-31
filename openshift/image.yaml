@@ -1,0 +1,11 @@
+apiVersion: image.openshift.io/v1
+kind: ImageStream
+metadata:
+  creationTimestamp: '2022-10-30T15:21:32Z'
+  generation: 1
+  name: django-ex-docker
+  namespace: my-webapplication
+  resourceVersion: '187272'
+  selfLink: >-
+    /apis/image.openshift.io/v1/namespaces/my-webapplication/imagestreams/django-ex-docker
+  uid: 89019d33-5866-11ed-9fbe-525400541fb2
