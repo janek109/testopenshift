@@ -30,4 +30,4 @@ USER 10001
 #RUN source .venv/bin/activate
 RUN echo $0
 
-#ENTRYPOINT FLASK_APP=${APP_ROOT}/app.py flask fun --host=0.0.0.0
+ENTRYPOINT FLASK_APP=${APP_ROOT}/app.py flask fun --host=0.0.0.0
