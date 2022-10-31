@@ -5,9 +5,9 @@ FROM centos/python-36-centos7
 RUN add-apt-repository universe
 
 #RUN gpg --keyserver keyserver.ubuntu.com --recv-keys 871920D1991BC93C
-#RUN apt-get update && apt-get install -y python python-pip
+RUN apt-get update && apt-get install -y python python-pip
 
-RUN apt-get install -y python python-pip
+#RUN apt-get install -y python python-pip
 
 #RUN pip install flask
 
